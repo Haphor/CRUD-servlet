@@ -1,0 +1,73 @@
+@charset "ISO-8859-1";
+.main {
+	margin-left: 260px; /* Same as the width of the sidenav */
+	margin-top: 20px;
+	margin-right: 260px;
+	padding: 0px 10px;
+	background: #eee;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding-bottom: 10px;
+	border: 1px solid;
+	box-shadow: 1px 1px 1px 1px;
+}
+
+.postarea {
+	margin-left: 100px;
+}
+
+#image {
+	width: 80px;
+	height: 80px;
+	border: 1px solid black;
+	border-radius: 50%;
+}
+
+#mytext {
+	resize: none;
+	width: 400px;
+	height: 80px;
+	overflow: auto;
+	font-size: 13px;
+}
+
+.postarea {
+	padding-bottom: 20px;
+}
+
+.feeds {
+	width: 750px;
+	height: 460px;
+	overflow: auto;
+	
+}
+
+.feeds div {
+	position: relative;
+	border: 1px solid black;
+	/* border-bottom: 1px solid black; */
+	/* border-top: 1px solid black; */
+	margin-bottom: 30px;
+	width: 500px;
+	margin-left:100px;
+	overflow-y:auto;
+	padding-left: 5px;
+	padding-right: 5px;
+	/* background-color: #c0c0c0; */
+	
+}
+
+.feeds div small{
+	float:right;
+	
+}
+
+.feed div p{
+	text-indent: 50px;
+}
+
+.deletebtn{
+	position: absolute;
+    top: 2px;
+    right: 2px;
+}
