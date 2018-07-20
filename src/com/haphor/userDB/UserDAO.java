@@ -12,4 +12,6 @@ public interface UserDAO {
 	public void updatePass(int userid, String password, String query);
 	public int updateProfile(User u, String query);
 	public String selectFull(int userid, String query);
+	
+	public int changePic(User u, String query);
 }

@@ -16,14 +16,14 @@
                                 <div class="form-group">
                                     <label for="uname">User name</label>
                                     <div class="input-group pb-modalreglog-input-group">
-                                        <input type="text" class="form-control" name="uname" id="uname" placeholder="User name">
+                                        <input type="text" class="form-control" name="uname" required id="uname" placeholder="User name">
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="password">Password</label>
                                     <div class="input-group pb-modalreglog-input-group">
-                                        <input type="password" class="form-control" name="psw" id="psw" placeholder="Password">
+                                        <input type="password" class="form-control" name="psw" required id="psw" placeholder="Password">
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
                                     </div>
                                 </div>
@@ -55,42 +55,42 @@
                                     <label for="uname">User name</label>
                                     <div class="input-group pb-modalreglog-input-group">
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                                        <input type="text" class="form-control" name="uname" id="inputUname" placeholder="User name">
+                                        <input type="text" class="form-control" name="uname" required id="inputUname" placeholder="User name">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="fname">First name</label>
                                     <div class="input-group pb-modalreglog-input-group">
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                                        <input type="text" class="form-control" name="fname" id="inputFname" placeholder="First name">
+                                        <input type="text" class="form-control" name="fname" required id="inputFname" placeholder="First name">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="lname">Last name</label>
                                     <div class="input-group pb-modalreglog-input-group">
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                                        <input type="text" class="form-control" name="lname" id="inputLname" placeholder="Last name">
+                                        <input type="text" class="form-control" name="lname" required id="inputLname" placeholder="Last name">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Email address</label>
                                     <div class="input-group pb-modalreglog-input-group">
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                                        <input type="email" class="form-control" name="email" id="inputEmail" placeholder="Email">
+                                        <input type="email" class="form-control" name="email" required id="inputEmail" placeholder="Email">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="psw1">Password</label>
                                     <div class="input-group pb-modalreglog-input-group">
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                                        <input type="password" class="form-control" name="psw1" id="inputPws" placeholder="Password">
+                                        <input type="password" class="form-control" name="psw1" required id="inputPws" placeholder="Password">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="psw2">Confirm password</label>
                                     <div class="input-group pb-modalreglog-input-group">
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                                        <input type="password" class="form-control" name="psw2" id="inputConfirmPws" placeholder="Confirm Password">
+                                        <input type="password" class="form-control" name="psw2" required id="inputConfirmPws" placeholder="Confirm Password">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -355,13 +355,13 @@
                                 <div class="form-group">
                                     <label for="age">Age</label>
                                     <div class="input-group pb-modalreglog-input-group">
-                                        <input id="age" class="form-control" name="age" placeholder="Age">
+                                        <input id="age" class="form-control" name="age" required placeholder="Age">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="userimg">Image</label>
                                     <div class="input-group pb-modalreglog-input-group">
-                                        <input type="file" size="150" id="userimg" class="form-control" name="userimg" placeholder="Choose Image">
+                                        <input type="file" size="150" id="userimg" required class="form-control" name="userimg" placeholder="Choose Image">
                                     </div>
                                 </div>
                                 <div class="modal-footer">

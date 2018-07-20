@@ -27,8 +27,6 @@ if(request.getSession().getAttribute("LogUser")==null){
 	
 	response.sendRedirect(request.getContextPath());
 }
-
-
 %>
 <style>
 .pointer{
@@ -39,6 +37,16 @@ if(request.getSession().getAttribute("LogUser")==null){
 
 
 </style>
+<script>
+function addlines()
+{
+	text = document.getElementById('mytext').value;
+	text = text.replace(/  /g,"&nbsp");
+	text = text.replace(/\n/g, "<br>");
+	document.getElementById('mytext').value = text;
+}
+
+</script>
 
 <header>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -71,7 +79,7 @@ if(request.getSession().getAttribute("LogUser")==null){
 <div class="main">
   	<h2>News Feed</h2>
   	<div class="postarea">
-  		<form action="../posting" method="post">
+  		<form action="../posting" method="post" onsubmit="addlines()">
   			<table>
   				<tr>
   					<td>
@@ -92,8 +100,9 @@ if(request.getSession().getAttribute("LogUser")==null){
   	<div class="feeds">
   		<c:forEach items="${allpost}" var="posts">
   			<div>
+  				<img alt="User Pic" src="${pageContext.request.contextPath}/displaypostImage?img=${posts.userid}"> 
   				<h4>${posts.fullname}</h4>
-  				<p>${posts.content}</p>
+  				<p id="myconts">${posts.content}</p>
   				<small>${posts.date}</small>
   				<c:if test="${posts.userid==LogId}">
   				<a href="../deletePost?curpost=${posts.postid}"class="deletebtn pointer">Delete</a>

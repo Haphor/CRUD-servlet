@@ -30,6 +30,7 @@ public class Posting extends HttpServlet {
 		
 		String mypost = request.getParameter("mypost");
 		
+		
 		String date= new java.util.Date().toString();
 		String query = "INSERT INTO POST (`userid`, `content`,`postdate`) VALUES (?,?, ?)";
 		

@@ -179,4 +179,21 @@ public class UserDAOImpl implements UserDAO{
 		return fullname;
 	}
 
+	@Override
+	public int changePic(User u, String query) {
+		int status=0;
+		try {
+			con = MyConnection.getCon();
+			st=con.prepareStatement(query);
+			st.setBlob(1, u.getImage());
+			st.setInt(2, u.getUserid());
+			status=st.executeUpdate();
+		}catch(Exception e) {
+			System.out.println(e);
+		}
+		
+		return status;
+		// TODO Auto-generated method stub
+	}
+
 }

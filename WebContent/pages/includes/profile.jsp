@@ -10,7 +10,6 @@
 	<div  id="info">
 		
 <%
-
 	com.haphor.userDB.UserDAO ud = new com.haphor.userDB.UserDAOImpl();
 	int id = Integer.parseInt(request.getSession().getAttribute("LogId")+"");
 	com.haphor.userDB.User u = ud.viewUser(id, "select * from USER where userid=?");
@@ -139,8 +138,12 @@ margin-top:20px;
            <A href="../LogoutServ" >Sign Out</A>
        	<br>
 		<p class=" text-info">May 05,2014,03:00 pm </p>
-		  <div style="max-width:300px; max-height: 300px;"class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" style="width:180px;" src="${pageContext.request.contextPath}/displayImage" class="img-circle img-responsive"> 
+		  <div style="max-width:300px; margin-bottom: 20px; max-height: 300px;"class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" style="width:180px;" src="${pageContext.request.contextPath}/displayImage" class="img-circle img-responsive"> 
           </div>
+          <form action="../changePic" method="post" enctype='multipart/form-data'>
+          	<input required type="file" size="150" id="userimg" required class="form-control" name="userimg" placeholder="Choose Image">
+          	<input type="submit" name="Change Picture" value="Change Picture">
+          </form>
       </div>
       </div>
       <!-- 	EDIT HERE  -->
@@ -441,9 +444,6 @@ margin-top:20px;
          <input class="pointer" type="button" id="editpassbtn" value="Edit Password">
            
        	<br>
-		<p class=" text-info">May 05,2014,03:00 pm </p>
-		  <div style=" float:left; max-width:200px; max-height: 200px;"class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="../images/FromDb.jpg" class="img-circle img-responsive"> 
-          </div>
       </div>
       </form>
       </div>
