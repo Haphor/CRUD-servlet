@@ -25,7 +25,7 @@ response.setHeader("Expires", "0");//Proxies
 
 if(request.getSession().getAttribute("LogUser")!=null){
 	
-	response.sendRedirect("pages/welcome.jsp");
+	response.sendRedirect("Home");
 }
 %>
 <header>

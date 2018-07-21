@@ -10,10 +10,10 @@
 
 
 <%-- <jsp:include page="includes/cssincludes4welcome.jsp"></jsp:include> --%>
-<link href="../StylesAndScript4NAV/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="../StylesAndScript4NAV/css/logo-nav.css" rel="stylesheet">
-<link rel="stylesheet" href="../css/Footer-with-social-icons.css">
-<link rel="stylesheet" href="../css/content.css">
+<link href="${pageContext.request.contextPath}/StylesAndScript4NAV/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/StylesAndScript4NAV/css/logo-nav.css" rel="stylesheet">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/Footer-with-social-icons.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/content.css">
 </head>
 <body>
 <%
@@ -34,7 +34,6 @@ if(request.getSession().getAttribute("LogUser")==null){
 	cursor: pointer;
 	
 }
-
 
 </style>
 <script>
@@ -60,12 +59,12 @@ function addlines()
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link pointer" id="home">Home
+              <a class="nav-link pointer" href="../Home" id="home">Home
                 <!-- <span class="sr-only">(current)</span> -->
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link pointer" id="profile">Profile</a>
+              <a class="nav-link pointer" href="viewProfile" id="profile">Profile</a>
             </li>
           </ul>
         </div>
@@ -79,7 +78,7 @@ function addlines()
 <div class="main">
   	<h2>News Feed</h2>
   	<div class="postarea">
-  		<form action="../posting" method="post" onsubmit="addlines()">
+  		<form action="posting" method="post" onsubmit="addlines()">
   			<table>
   				<tr>
   					<td>
@@ -105,7 +104,7 @@ function addlines()
   				<p id="myconts">${posts.content}</p>
   				<small>${posts.date}</small>
   				<c:if test="${posts.userid==LogId}">
-  				<a href="../deletePost?curpost=${posts.postid}"class="deletebtn pointer">Delete</a>
+  				<a href="deletePost?curpost=${posts.postid}"class="deletebtn pointer">Delete</a>
   				</c:if>
   			</div>
   		</c:forEach>
@@ -119,21 +118,5 @@ function addlines()
 <script src="../StylesAndScript4NAV/vendor/jquery/jquery.min.js"></script>
 <script src="../StylesAndScript4NAV/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="../js/jquery-3.3.1.min.js"></script>
-<script>
-$(document).ready(function(){
-	 $('#home').click(function(){
-		 location.reload();
-		
-	});
-	 
-	$('#profile').click(function(){
-		$('#content').load('../pages/includes/profile.jsp');
-		
-	});
-});
-
-
-
-</script>
 </body>
 </html>

@@ -361,7 +361,7 @@
                                 <div class="form-group">
                                     <label for="userimg">Image</label>
                                     <div class="input-group pb-modalreglog-input-group">
-                                        <input type="file" size="150" id="userimg" required class="form-control" name="userimg" placeholder="Choose Image">
+                                        <input type="file" accept="image/*" size="150" id="userimg" required class="form-control" name="userimg" placeholder="Choose Image">
                                     </div>
                                 </div>
                                 <div class="modal-footer">
