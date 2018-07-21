@@ -54,7 +54,7 @@ public class changePic extends HttpServlet {
 		 u.setImage(inputStream);
 		 u.setUserid(Integer.parseInt(request.getSession().getAttribute("LogId").toString()));
 		 ud.changePic(u, updateProfileQuery);
-		 response.sendRedirect(request.getContextPath()+"/getPost");
+		 response.sendRedirect(request.getContextPath()+"/viewProfile");
 		 }
 	}
 }

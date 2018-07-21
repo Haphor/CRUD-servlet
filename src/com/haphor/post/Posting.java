@@ -44,7 +44,7 @@ public class Posting extends HttpServlet {
 		pd.insertPost(p, query);
 		
 		
-		response.sendRedirect(request.getContextPath()+"/getPost");
+		response.sendRedirect(request.getContextPath()+"/Home");
 		
 		
 	/*PrintWriter out = response.getWriter();

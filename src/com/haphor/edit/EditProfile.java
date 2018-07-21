@@ -1,7 +1,6 @@
 package com.haphor.edit;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,8 +27,6 @@ public class EditProfile extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		PrintWriter out = response.getWriter();
-		out.print("12341234134");
 		String uname = request.getParameter("uname");
 		String fname = request.getParameter("fname");
 		String lname = request.getParameter("lname");
@@ -56,7 +53,8 @@ public class EditProfile extends HttpServlet {
 		{
 			if(ud.checkExist(uname, userExistQuery)) 
 			{
-				System.out.println("exist");
+				request.getSession().setAttribute("errormessage", "Username Already Exist");
+				response.sendRedirect("viewProfile");
 			}
 			else
 			{
@@ -69,6 +67,7 @@ public class EditProfile extends HttpServlet {
 				u.setGender(gender);
 				u.setAge(age);
 				ud.updateProfile(u, updateProfileQuery);
+				response.sendRedirect("viewProfile");
 			}
 			
 		}
@@ -79,15 +78,18 @@ public class EditProfile extends HttpServlet {
 				if(editpass1.equals(editpass2))
 				{
 					ud.updatePass(Integer.parseInt(request.getSession().getAttribute("LogId").toString()), editpass1, updatePassQuery);
+					response.sendRedirect("viewProfile");
 				}
 				else
 				{
-					//male
+					request.getSession().setAttribute("errormessage", "Passwords do not match");
+					response.sendRedirect("viewProfile");
 				}
 			}
 			else
 			{
-				//male
+				request.getSession().setAttribute("errormessage", "Old Password do not match");
+				response.sendRedirect("viewProfile");
 			}
 		}
 	}

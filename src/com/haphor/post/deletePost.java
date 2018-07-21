@@ -32,7 +32,7 @@ public class deletePost extends HttpServlet {
 		pd.deletePost(curpost, query);
 		
 		
-		response.sendRedirect(request.getContextPath()+"/getPost");
+		response.sendRedirect(request.getContextPath()+"/Home");
 	}
 
 }

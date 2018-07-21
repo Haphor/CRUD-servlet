@@ -42,7 +42,7 @@ public class LoginServ extends HttpServlet {
 			session.setAttribute("LogId", uu);
 			session.setAttribute("LogUser", uname);
 			session.setAttribute("LogPass", pass);
-			response.sendRedirect(request.getContextPath()+"/getPost");
+			response.sendRedirect(request.getContextPath()+"/Home");
 		}
 		else
 		{
